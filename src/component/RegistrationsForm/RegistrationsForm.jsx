@@ -36,18 +36,20 @@ const RegistrationsForm = ({ userType = 'candidate' }) => {
                   ))}
                 </div>
               )}
-              <label className="form-label" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete="email"
-                className="form-control form-control-lg input-field"
-              />
+              <div className="mb-3 text-start form-group">
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="email"
+                  className="form-control form-control-lg input-field"
+                />
+              </div>
 
               <div className="mb-3 text-start form-group">
                 <label
