@@ -29,10 +29,6 @@ jobs:
           else
             npm install
           fi
-
-      # Step 4: Build the project
-      - name: Build
-        run: npm run build
       # Debug: List files and directories
       - name: List project files
         run: ls -la
@@ -42,6 +38,9 @@ jobs:
         run: |
           node -v
           npm -v
+      # Step 4: Build the project
+      - name: Build
+        run: npm run build
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
