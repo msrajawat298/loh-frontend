@@ -24,4 +24,7 @@ export default defineConfig({
     },
   },
   base: '/react-vite-starter-app-template', // Replace with your repository name
+  build: {
+    outDir: 'docs',
+  },
 });

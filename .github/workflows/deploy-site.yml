@@ -33,12 +33,20 @@ jobs:
       # Step 4: Build the project
       - name: Build
         run: npm run build
+      # Debug: List files and directories
+      - name: List project files
+        run: ls -la
 
+      # Debug: Check Node.js and npm versions
+      - name: Check versions
+        run: |
+          node -v
+          npm -v
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./docs
           user_name: "Mayank Singh Kushwah"
           user_email: msrajawat298@gmail.com
