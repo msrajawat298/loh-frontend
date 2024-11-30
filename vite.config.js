@@ -23,5 +23,5 @@ export default defineConfig({
       reporter: ['text', 'html', 'lcov'],
     },
   },
-  base: '/react-vite-starter-app-template', // Replace with your repository name
+  base: '/loh-frontend', // Replace with your repository name
 });
