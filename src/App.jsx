@@ -1,11 +1,11 @@
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './appRoutes/AppRoutes';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/react-vite-starter-app-template">
       <AppRoutes />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

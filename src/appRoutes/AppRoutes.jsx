@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../component/home/Home';
-import About from '../component/about/About';
-import Faq from '../component/faq/Faq';
-import Contact from '../component/contact/Contact';
-import PageNotFound from '../component/pagenotfound/PageNotFound';
+import Home from '../component/Home/Home';
+import About from '../component/About/About';
+import Faq from '../component/Faq/Faq';
+import Contact from '../component/Contact/Contact';
+import PageNotFound from '../component/PageNotFound/PageNotFound';
 
 function AppRoutes() {
   return (
