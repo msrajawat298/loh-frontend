@@ -12,8 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Clear cache
+        run: rm -rf node_modules/.vite
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Deploy to GitHub Pages
