@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../component/Home/Home';
-import About from '../component/About/About';
-import Faq from '../component/Faq/Faq';
-import Contact from '../component/Contact/Contact';
-import PageNotFound from '../component/PageNotFound/PageNotFound';
-import RegistrationsForm from '../component/RegistrationsForm/RegistrationsForm';
+import Home from '../components/Home/Home';
+import About from '../components/About/About';
+import Faq from '../components/Faq/Faq';
+import Contact from '../components/Contact/Contact';
+import PageNotFound from '../components/PageNotFound/PageNotFound';
+import RegistrationsForm from '../components/RegistrationsForm/RegistrationsForm';
 
 const AppRoutes = () => {
   return (

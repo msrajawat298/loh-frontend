@@ -31,7 +31,7 @@ jobs:
           fi
       # Debug: List files and directories
       - name: List project files
-        run: ls -la
+        run: ls -R src/components
 
       # Debug: Check Node.js and npm versions
       - name: Check versions
@@ -46,6 +46,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./dist
           user_name: "Mayank Singh Kushwah"
           user_email: msrajawat298@gmail.com
