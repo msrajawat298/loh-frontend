@@ -4,7 +4,7 @@ import './styles/styles.scss';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/react-vite-starter-app-template">
+    <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
   );
