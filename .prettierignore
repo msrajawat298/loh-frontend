@@ -1,0 +1,8 @@
+node_modules/
+docs/
+coverage/
+.vscode
+dist/
+.DS_Store
+package-lock.json
+README.md
