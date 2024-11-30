@@ -1,41 +1,54 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-absolute-path */
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import reactLogo from '../../assets/react.svg';
-import viteLogo from '/vite.svg';
+import Navbar from '../Navbar/Navbar';
 import '../../App.css';
+import Footer from '../Footer/Footer';
 
-function Home() {
-  const [count, setCount] = useState(0);
+const Home = () => {
+  // const user = {
+  //   name: 'John Doe',
+  //   email: 'test@gmail.com',
+  // };
+  const user = null;
 
   return (
-    <div>
-      <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-      </a>
-      <a href="https://react.dev" target="_blank" rel="noreferrer">
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </a>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((param) => param + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    <>
+      <Navbar user={user} />
+      <div className="container top-margin">
+        <div className="text-center rounded-3">
+          <h2 className="jumbotron-heading">
+            {' '}
+            Discover Your Next Opportunity with LayoffHelp!{' '}
+          </h2>
+
+          <p className="col-lg-5 mx-auto jumbotron-para">
+            If you&apos;re a professional looking for your next opportunity,
+            leave your details with us. Your profile can be viewed by potential
+            employers who might be interested in what you bring to the table.
+            It&apos;s a straightforward way to get noticed.
+          </p>
+          <p> Singup today! to get started </p>
+
+          <div className="d-inline-flex gap-3">
+            <div className="d-inline-flex gap-3">
+              <Link
+                to="/signup"
+                className="d-inline-flex align-items-center btn btn-lg px-4 rounded-pill jumbotron-button-primary"
+              >
+                Job Hunting?
+              </Link>
+              <Link
+                to="/signup_recruiter"
+                className="btn btn-lg px-4 rounded-pill jumbotron-button-primary"
+              >
+                Recruit Talent
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <ul>
-        <Link to="/about">About | </Link>
-        <Link to="/contact"> Contact | </Link>
-        <Link to="/faq"> Faq</Link>
-      </ul>
-    </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default Home;

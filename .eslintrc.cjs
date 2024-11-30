@@ -19,5 +19,20 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'prettier/prettier': 'error',
+    'react/function-component-definition': [
+    'error',
+    {
+      'namedComponents': 'arrow-function',
+      'unnamedComponents': 'arrow-function',
+    },
+  ],
+  "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
   },
 }
