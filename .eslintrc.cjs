@@ -26,6 +26,8 @@ module.exports = {
       'unnamedComponents': 'arrow-function',
     },
   ],
+  'jsx-a11y/anchor-is-valid': 'off',
+  'react/button-has-type': 'off',
   "jsx-a11y/label-has-associated-control": [
       "error",
       {
