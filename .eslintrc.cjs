@@ -28,6 +28,7 @@ module.exports = {
   ],
   'jsx-a11y/anchor-is-valid': 'off',
   'react/button-has-type': 'off',
+  'linebreak-style': 0,
   "jsx-a11y/label-has-associated-control": [
       "error",
       {

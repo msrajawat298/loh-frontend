@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import logo from '../../assets/images/lh-trans.png';
 
 const Navbar = ({ userSignedIn, currentUser }) => {
   return (
@@ -7,11 +8,7 @@ const Navbar = ({ userSignedIn, currentUser }) => {
       <div className="container-fluid">
         {/* Logo and Company Name */}
         <Link to="/" className="navbar-brand">
-          <img
-            src="src/assets/images/lh-trans.png"
-            alt="Layoffhelp"
-            className="logo"
-          />
+          <img src={logo} alt="Layoffhelp" className="logo" />
           <span className="logo-text"> Layoffhelp </span>
         </Link>
 
@@ -32,7 +29,7 @@ const Navbar = ({ userSignedIn, currentUser }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           {userSignedIn ? (
             <>
-              {currentUser.Navbar ? (
+              {currentUser?.Navbar ? (
                 <ul className="navbar-nav navbar-nav-center">
                   <li className="nav-item">
                     <Link to="/Navbar/dashboard" className="nav-link">
@@ -69,7 +66,7 @@ const Navbar = ({ userSignedIn, currentUser }) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      to={`/employer/${currentUser.id}/edit`}
+                      to={`/employer/${currentUser?.id}/edit`}
                       className="nav-link"
                     >
                       Update Profile
@@ -88,7 +85,7 @@ const Navbar = ({ userSignedIn, currentUser }) => {
               <ul className="navbar-nav ms-auto align-items-center">
                 <li className="nav-item">
                   <div className="nav-link nav-link question">
-                    Welcome {currentUser.email}
+                    Welcome {currentUser?.email}
                   </div>
                 </li>
                 <li className="nav-item">
@@ -143,7 +140,7 @@ Navbar.propTypes = {
   userSignedIn: PropTypes.bool.isRequired,
   currentUser: PropTypes.shape({
     Navbar: PropTypes.bool,
-    id: PropTypes.string,
+    id: PropTypes.number,
     email: PropTypes.string,
   }).isRequired,
 };

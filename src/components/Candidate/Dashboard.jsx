@@ -32,7 +32,7 @@ const JobPosts = ({ userSignedIn, currentUser }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           {userSignedIn ? (
             <>
-              {currentUser.candidate ? (
+              {currentUser?.candidate ? (
                 <ul className="navbar-nav navbar-nav-center">
                   <li className="nav-item">
                     <Link to="/candidate/dashboard" className="nav-link">
@@ -69,7 +69,7 @@ const JobPosts = ({ userSignedIn, currentUser }) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      to={`/employer/${currentUser.id}/edit`}
+                      to={`/employer/${currentUser?.id}/edit`}
                       className="nav-link"
                     >
                       Update Profile
@@ -88,7 +88,7 @@ const JobPosts = ({ userSignedIn, currentUser }) => {
               <ul className="navbar-nav ms-auto align-items-center">
                 <li className="nav-item">
                   <div className="nav-link nav-link question">
-                    Welcome {currentUser.email}
+                    Welcome {currentUser?.email}
                   </div>
                 </li>
                 <li className="nav-item">
