@@ -16,5 +16,5 @@ export default defineConfig({
       reporter: ['text', 'html', 'lcov'],
     },
   },
-  base: 'https://loh-frontend.onrender.com/', // Replace with your repository name // for local development, use '/'
+  // base: 'https://loh-frontend.onrender.com/', // Replace with your repository name // for local development, use '/'
 });
